@@ -1,0 +1,137 @@
+{
+  "info": {
+    "_postman_id": "e1253212-4781-4cd9-9b1b-c406e63dd9fc",
+    "name": "Products",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "createProduct",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\" : \"New Product\",\r\n    \"price\" : 100,\r\n    \"description\": \"This is new product\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/createProduct",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["createProduct"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getCurrencyRate",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://apilayer.net/api/live?access_key=1936eb37ee03377d81877c53a014b454&currencies=EUR,GBP,CAD,PLN&source=USD&format=1",
+          "protocol": "http",
+          "host": ["apilayer", "net"],
+          "path": ["api", "live"],
+          "query": [
+            {
+              "key": "access_key",
+              "value": "1936eb37ee03377d81877c53a014b454"
+            },
+            {
+              "key": "currencies",
+              "value": "EUR,GBP,CAD,PLN"
+            },
+            {
+              "key": "source",
+              "value": "USD"
+            },
+            {
+              "key": "format",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getProductByID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\" : \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/getProductById",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["getProductById"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getProducts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"view_count\" : 5,\r\n    \"currency\" : \"CAD\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/getProducts",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["getProducts"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteProduct",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 1\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/deleteProduct",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["deleteProduct"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
