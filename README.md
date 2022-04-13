@@ -1,4 +1,4 @@
-# REST API Tech Assignment features
+# Designing and working with Restful APIs
 
 Tech stack - Node JS, Express, SQLite
 
